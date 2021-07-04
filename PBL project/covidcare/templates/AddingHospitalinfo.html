@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Information </title>
+</head>
+<body>
+<section class="header">
+        <nav>
+            <img src="{% static "footer.jpeg" %}" id="one">
+            <br>
+            <div class="site-logo">
+                <a href="#">COVID<br> CARE</a>
+            </div>
+
+            <div class="site-primary-navigation">
+            <form action="/search" method="GET" class="HeaderSearch">
+                <input type="search" name="q" placeholder="Search...">
+                <div class="icon">
+
+
+            </form>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="">CONTENT</a>
+                    </li>
+                </ul>
+            </div>
+    <div class="navbar-module__right-items__1lFyB">
+        <div class="notifications-m__container__bYEPc">
+            <div data-testid="notification-button" class="notifications-m__button-holder__1CU0S">
+                <div class="notifications-m__count__1MoQc"><!-- 1+ --></div>
+                   <div class="notifications-m__icon__2WXWQ" style="background-image:url(https://fea.assettype.com/bloombergquint/assets/notification-icon-white-66d3988f6ecce365e069.svg);"></div></div></div>
+                   <div id="headerDmp">
+                    <div class="member-menu-module__container__2fEtB">
+                        <div class="mobile-hidden member-menu-module__desktop-flex__1hImb"><a id="subscribe" dmptrack="true" href="" class="member-menu-module__link__-4gEH">REGISTER</a><a id="login" href="#" class="member-menu-module__link__-4gEH">LOGIN</a></div>
+                           </div> </div>
+
+
+    </div>
+
+
+        </nav>
+
+        <div class="alert-banner">
+            <div class="content">
+                <div class="text">
+                    <strong>Coronavirus pandemic</strong>: daily updated research and data.
+                </div>
+                <a href="/coronavirus" data-track-note="covid-banner-click">Read more</a>
+            </div>
+        </div>
+
+    </section>
+<h2>Fill Hospital Information</h2>
+<h3>hello , {{request.user}}</h3>
+<form action="{% url 'home' %}"  method="post" >
+    {% csrf_token %}
+    Hospital Name: {{alpha.Hospital_Name}}<br>
+    Hospital CityName : {{alpha.Hospital_CityName}}<br>
+    Hospital Pincode : {{alpha.Hospital_Pincode}}<br>
+    Hospital ContactNo : {{alpha.Hospital_ContactNo}}<br>
+    Hospital ICUBeds Availability : {{alpha.Hospital_ICUBeds}}
+    <input class="btn login_btn" type="submit" value="add">
+
+<section class="homepage-masthead">
+   <div class="wrapper">
+       <h1>DONT WORRY BE INFORMED AND UPDATED!!!</h1>
+     <br>
+       <h1>Your Health Remains Our Topmost Priority</h1>
+        <a href="#entries" class="see-all" data-smooth-scroll="true" data-track-note="homepage-scroll">Explore our website
+         <span class="icon">
+             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-down" class="svg-inline--fa fa-angle-double-down fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                 <path fill="currentColor" d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z">
+                 </path>
+            </svg>
+        </span>
+       </a>
+      <p>All free: open access and open source</p>
+</div>
+</section>
+
+
+</form>
+</body>
+</html>
